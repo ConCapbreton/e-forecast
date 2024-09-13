@@ -121,7 +121,7 @@ const ContextProvider = ({children}: ChildrenType) => {
         const getStoredApiData = JSON.parse(localStorage.getItem("storedApiData") as string)
         const getStoredTideData = JSON.parse(localStorage.getItem("storedTideData") as string)
         const getStoredDayLengthData = JSON.parse(localStorage.getItem("storedDayLengthData") as string)
-        if (getStoredApiData.errors) {setErrorMsg(["Error!"]); setIsLoading(false);}      
+        if (getStoredApiData.errors) {setErrorMsg(["Error!"]); setIsLoading(false); console.log(APIKEY)}      
         let apiDate = getStoredApiData.meta.start
         let cutApiDate = apiDate.slice(0, 10)
         if (formattedDateString === cutApiDate) {
