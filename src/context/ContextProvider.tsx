@@ -121,7 +121,7 @@ const ContextProvider = ({children}: ChildrenType) => {
         const getStoredApiData = JSON.parse(localStorage.getItem("storedApiData") as string)
         const getStoredTideData = JSON.parse(localStorage.getItem("storedTideData") as string)
         const getStoredDayLengthData = JSON.parse(localStorage.getItem("storedDayLengthData") as string)
-        if (getStoredApiData.meta.start == null) {setIsLoading(false); setErrorMsg(["Clicking the Reload button should hopefully fix this error!"])}      
+        if (getStoredApiData.errors) {setIsLoading(false); setErrorMsg(["Clicking the Reload button should hopefully fix this error!"])}      
         let apiDate = getStoredApiData.meta.start
         let cutApiDate = apiDate.slice(0, 10)
         if (formattedDateString === cutApiDate) {
