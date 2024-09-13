@@ -1,0 +1,89 @@
+{
+    "results": [
+        {
+            "date": "2024-09-09",
+            "sunrise": "0538",
+            "sunset": "1830",
+            "first_light": "0359",
+            "last_light": "2010",
+            "dawn": "0509",
+            "dusk": "1859",
+            "solar_noon": "1204",
+            "golden_hour": "1752",
+            "day_length": "12:51:54",
+            "timezone": "UTC",
+            "utc_offset": 0
+        },
+        {
+            "date": "2024-09-10",
+            "sunrise": "0540",
+            "sunset": "1829",
+            "first_light": "0400",
+            "last_light": "2008",
+            "dawn": "0510",
+            "dusk": "1858",
+            "solar_noon": "1204",
+            "golden_hour": "1751",
+            "day_length": "12:48:58",
+            "timezone": "UTC",
+            "utc_offset": 0
+        },
+        {
+            "date": "2024-09-11",
+            "sunrise": "0541",
+            "sunset": "1827",
+            "first_light": "0401",
+            "last_light": "2006",
+            "dawn": "0512",
+            "dusk": "1856",
+            "solar_noon": "1204",
+            "golden_hour": "1749",
+            "day_length": "12:46:02",
+            "timezone": "UTC",
+            "utc_offset": 0
+        },
+        {
+            "date": "2024-09-12",
+            "sunrise": "0542",
+            "sunset": "1825",
+            "first_light": "0403",
+            "last_light": "2004",
+            "dawn": "0513",
+            "dusk": "1854",
+            "solar_noon": "1203",
+            "golden_hour": "1747",
+            "day_length": "12:43:06",
+            "timezone": "UTC",
+            "utc_offset": 0
+        },
+        {
+            "date": "2024-09-13",
+            "sunrise": "0543",
+            "sunset": "1823",
+            "first_light": "0404",
+            "last_light": "2002",
+            "dawn": "0514",
+            "dusk": "1852",
+            "solar_noon": "1203",
+            "golden_hour": "1745",
+            "day_length": "12:40:09",
+            "timezone": "UTC",
+            "utc_offset": 0
+        },
+        {
+            "date": "2024-09-14",
+            "sunrise": "0544",
+            "sunset": "1821",
+            "first_light": "0406",
+            "last_light": "2000",
+            "dawn": "0515",
+            "dusk": "1850",
+            "solar_noon": "1203",
+            "golden_hour": "1743",
+            "day_length": "12:37:12",
+            "timezone": "UTC",
+            "utc_offset": 0
+        }
+    ],
+    "status": "OK"
+}
