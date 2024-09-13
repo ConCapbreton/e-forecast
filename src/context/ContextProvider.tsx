@@ -122,15 +122,17 @@ const ContextProvider = ({children}: ChildrenType) => {
         const getStoredTideData = JSON.parse(localStorage.getItem("storedTideData") as string)
         const getStoredDayLengthData = JSON.parse(localStorage.getItem("storedDayLengthData") as string)
         if (!getStoredApiData.meta.start == null) {setIsLoading(false); setErrorMsg(["Clicking the Reload button should hopefully fix this error!"])}      
-        let apiDate = getStoredApiData.meta.start
-        let cutApiDate = apiDate.slice(0, 10)
-        if (formattedDateString === cutApiDate) {
-          setApiData(getStoredApiData) 
-          setTideData(getStoredTideData)
-          setDayLengthData(getStoredDayLengthData)
-          setIsLoading(false)
-          console.log("Data from Cache")
-          return
+        else {
+          let apiDate = getStoredApiData.meta.start
+          let cutApiDate = apiDate.slice(0, 10)
+          if (formattedDateString === cutApiDate) {
+            setApiData(getStoredApiData) 
+            setTideData(getStoredTideData)
+            setDayLengthData(getStoredDayLengthData)
+            setIsLoading(false)
+            console.log("Data from Cache")
+            return
+        }
         }
       }
       // CACHED DATA DOESNT EXIST / OUT OF DATE -> CLEAR LOCAL STORAGE AND CALL DATA FROM API 
