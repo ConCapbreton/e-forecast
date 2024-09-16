@@ -77,8 +77,7 @@ type ChildrenType = {children?: ReactElement | ReactElement[]}
 const ContextProvider = ({children}: ChildrenType) => {
   //API CALLS
 
-  // TO BE MOVED OUT WHEN DEPLOYING TO THE INTERNET
-  const APIKEY = import.meta.env.VITE_STORMGLASS_API_KEY
+  const APIKEY = "3c52dfbe-66a3-11ef-8a8f-0242ac130004-3c52e02c-66a3-11ef-8a8f-0242ac130004"
   
   const [apiData, setApiData] = useState() 
   const [tideData, setTideData] = useState()
@@ -121,7 +120,6 @@ const ContextProvider = ({children}: ChildrenType) => {
         const getStoredApiData = JSON.parse(localStorage.getItem("storedApiData") as string)
         const getStoredTideData = JSON.parse(localStorage.getItem("storedTideData") as string)
         const getStoredDayLengthData = JSON.parse(localStorage.getItem("storedDayLengthData") as string)
-        console.log(APIKEY)
         if (getStoredApiData.errors) {setErrorMsg(["Error!"]); setIsLoading(false); }      
         let apiDate = getStoredApiData.meta.start
         let cutApiDate = apiDate.slice(0, 10)
