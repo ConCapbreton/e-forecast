@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+Enhanced Forecast! A Typescript React surf forecasting site (using Tailwind CSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview:
 
-Currently, two official plugins are available:
+Deciding when and where to surf in the south west of France is tricky. There are lots of variables that have a significant impact in the quality of the waves; swell, wind, tide etc. Enhanced forecast takes into account all of these factors and tells you when and where to surf as well as providing a detailed general forecast. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technical features: 
 
-## Expanding the ESLint configuration
+- The website calls data from 3 APIs. The app stores the data received from the three APIs on the first call locally and only re-requests the data if the stored data is deleted or it is out of date.
+- The site makes use of several of React's hooks including useState, useEffect, useContext, useRef etc.
+- Manipulation of data using .map(), .filter(), for loops, .forEach(), .indexOf(), .sort(), .reduce(), toFixed(). slice() etc
+- Time corrections for the API data (provided in UTC) to show local times.
+- Date re-formatting to make data readable and useful for users using .toLocaleDateString() and .toDateString(), .getDate(), .setDate() etc
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Enhancement ideas:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- store the API KEY more securely using an Environment Variable on Netlify or Netlify Functions
+- consider a user login
+- tide data as a graph  
+- create a blog to record site recomendations vs actual conditions (and update data manipulation accordingly to improve the site)
+- the code could be more dry by consolidating some of the When and Where code into the context file. However, it is also an advantage to have these two functions completely seperate from each other should, in the future, you want to update one but not the other.  
